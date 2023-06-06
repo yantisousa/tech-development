@@ -1,0 +1,113 @@
+body {
+    color: rgb(218, 218, 218);
+    background: rgb(62,91,96);
+    background: radial-gradient(circle, rgba(62,91,96,1) 0%, rgba(56,40,40,1) 50%, rgba(0,0,0,1) 100%);
+}
+
+.section-1 {
+
+    color: rgb(173, 173, 173);
+    height: 60vh;
+    font-family: 'Roboto Mono', monospace;
+
+}
+.section-2 {
+
+    color: #dde3ed;
+    height: 50vh;
+    font-family: 'Eurostile Extended', sans-serif;
+}
+@media (max-width:771px) {
+    .section-2 {
+        height: 90vh;
+    }
+}
+@media (max-width: 375px) {
+    .section-2 {
+        height: 120vh;
+    }
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.navbar {
+    background-color: transparent;
+    color: black;
+    width: 100%;
+    position: fixed;
+}
+.bg-body-tertiary {
+    --bs-bg-opacity: 1;
+    background-color: transparent !important;
+
+}
+.bi-6-circle-fill {
+    font-size: 36px;
+}
+.title {
+    font-size: 40px;
+}
+.pesquisa {
+    width: 300px;
+    border-radius: 3px;
+}
+.card {
+    color: black;
+    height: 200px;
+    background: rgb(0,0,0);
+    background: linear-gradient(349deg, rgba(0,0,0,1) 0%, rgba(3,9,19,1) 42%, rgba(30,34,32,1) 100%);
+    border: none;
+
+}
+.desc {
+    width: 0px;
+    text-align: center;
+    animation: tamanho 4s;
+    overflow: hidden;
+}
+.desc::after {
+    text-align: center;
+    content: '|';
+    margin-left: 5px;
+    animation: opacidade 0.7s infinite;
+}
+@keyframes opacidade {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes tamanho {
+    from {width: 0px; text-align: center;}
+    to {width: 28em; text-align: center;}
+}
+@keyframes contador {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  #contador {
+    font-size: 48px;
+    animation: contador 0.1s linear;
+    animation-fill-mode: forwards;
+  }
+.section-3 {
+    height: 50vh;
+}
+@media (max-width: 900){
+    .section-3 {
+        position: relative;
+        top: 1000px;
+    }
+}
+@keyframes identifier {
+    from {
+        width: 0px; opacity: 0;
+    }
+    to {
+        width: 100%; opacity: 1;
+    }
+}
