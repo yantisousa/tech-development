@@ -7,7 +7,7 @@ body {
 .section-1 {
 
     color: rgb(173, 173, 173);
-    height: 60vh;
+    height: 100vh;
     font-family: 'Roboto Mono', monospace;
 
 }
@@ -18,9 +18,24 @@ body {
     font-family: 'Eurostile Extended', sans-serif;
 }
 @media (max-width:771px) {
+    .section-1 {
+        height: 140vh;
+    }
     .section-2 {
         height: 90vh;
     }
+    .section-3 {
+        height: 90vh;
+    }
+    h4{
+        position: relative;
+        left: 60px;
+    }
+    .logo {
+        position: relative;
+        right: 60px;
+    }
+
 }
 @media (max-width: 375px) {
     .section-2 {
@@ -33,7 +48,7 @@ a {
 }
 .navbar {
     background-color: transparent;
-    color: black;
+    color: #7d33be;
     width: 100%;
     position: fixed;
 }
@@ -97,17 +112,33 @@ a {
 .section-3 {
     height: 50vh;
 }
-@media (max-width: 900){
+/* @media (max-width: 900px){
     .section-3 {
         position: relative;
         top: 1000px;
     }
-}
+} */
 @keyframes identifier {
     from {
         width: 0px; opacity: 0;
     }
     to {
-        width: 100%; opacity: 1;
+        width: 105%; opacity: 1;
     }
+}
+.techs {
+    border: 1px solid #453f4b;
+    background: rgb(31,51,55);
+background: linear-gradient(135deg, rgba(31,51,55,1) 0%, rgba(60,54,66,1) 2%, rgba(0,0,0,1) 100%);
+    height: 200px;
+    border-radius: 20px;
+}
+footer {
+    height: 30vh;
+}
+#techs {
+    animation: desloca 2s ease forwards;
+}
+@keyframes desloca {
+    from {margin-right: 400px; opacity: 0;}
 }

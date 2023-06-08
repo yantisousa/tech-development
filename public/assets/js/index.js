@@ -49,7 +49,6 @@ contadorFormacoes();
 $(document).ready(function() {
     $(window).scroll(function() {
       var scrollPos = $(window).scrollTop()
-        console.log(scrollPos);
         if(scrollPos > 400){
             $('.feedback').css('animation', 'identifier 2s ease forwards')
         }

@@ -25,12 +25,12 @@
             <div class="container-fluid">
                 <div style="width: 70%" class="row mx-auto">
                     <div class="col ">
-                        <i class="bi bi-6-circle-fill"></i>
+                        <i class="bi bi-6-circle-fill logo"></i>
                     </div>
                     <div class="col text-end mt-3">
                         <a href="">
 
-                            <h4>Cursos</h4>
+                            <h4 class="link">Cursos</h4>
                         </a>
                     </div>
                 </div>
@@ -38,8 +38,8 @@
         </nav>
     </header>
     <section class="section-1">
-        <div class="container text-center">
-            <div style="height: 500px" class="row align-items-center">
+        <div class="container ">
+            <div style="height: 500px" class="row align-items-center text-center">
                 <div class="col">
                     <div class="name">
                         <h2 class="title"><strong>Tech Development</strong></h2>
@@ -50,13 +50,43 @@
                 </div>
 
             </div>
-        </div>
-        <div class="row align-items-center  text-center">
+            <div class="row" id="techs" style="opacity: 1">
+                <div class="col-md-4 mt-3" >
+                    <div class="techs">
+                        <div class="row">
+                            <div class="col-2 ms-4 mt-3" ><img src="{{ asset('assets/img/front-end.png') }}" class="img-thumbnail" alt=""></div>
+                            <div class="col mt-3" style="color:white">FRONT-END</div>
+                        </div>
+                        <div class="row">
+                            <div class="col ms-4 mt-3" style="color:white">HTML, CSS, JAVASCRIPT E REACT.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4  mt-3" >
+                    <div class="techs">
+                        <div class="row">
+                            <div class="col-2 ms-4 mt-3" ><img src="{{ asset('assets/img/encriptacao.png') }}" class="img-thumbnail" alt=""></div>
+                            <div class="col mt-3" style="color:white">BACK-END</div>
+                        </div>
+                        <div class="row">
+                            <div class="col ms-4 mt-3" style="color:white">PHP, LARAVEL E MYSQL.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4  mt-3" >
+                    <div class="techs">
+                        <div class="row">
+                            <div class="col-2 ms-4 mt-3" ><img src="{{ asset('assets/img/front-end.png') }}" class="img-thumbnail" alt=""></div>
+                            <div class="col mt-3" style="color:white">FULL-STACK</div>
+                        </div>
+                        <div class="row">
+                            <div class="col ms-4 mt-3" style="color:white">HTML, CSS, JAVASCRIPT, REACT, VUE, PHP, LARAVEL E MYSQL.</div>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="col mt-12">
 
             </div>
-
         </div>
     </section>
     <section class="section-2">
@@ -93,7 +123,6 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <h3>FeedBack dos Alunos</h3>
                 </div>
             </div>
             <div class="row mt-4 feedback" style="opacity: 0">
@@ -162,6 +191,17 @@
         </div>
     </section>
 
+    <footer>
+        <div class="container" style="height: 20vh">
+            <div class="row align-items-end mt-6">
+                <div class="col text-center">
+                        Termos de uso
+                    <h6> Todos os direitos reservados © 2023</h6>
+                    <h6>Yan Emanuel</h6>
+                </div>
+            </div>
+        </div>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
     </script>
