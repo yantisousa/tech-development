@@ -29,10 +29,15 @@
                     </div>
                     <div class="col text-end mt-3">
                         <a href="">
-
                             <h4 class="link">Cursos</h4>
                         </a>
                     </div>
+                    <div class="col-2 text-end mt-3">
+                        <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            <h4 class="link"><i class="bi bi-person"></i> Entrar</h4>
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </nav>
@@ -134,7 +139,7 @@
                                 <i class="bi bi-person-square"></i>
                             </div>
                             <div class="col mt-4" style="color: rgb(173, 173, 173)">
-                               <h5> Yan Emanuel de Sousa Pereira</h5>
+                               <h5> Yan Emanuel</h5>
                             </div>
                         </div>
                         {{-- Descrição --}}
@@ -154,7 +159,7 @@
                                 <i class="bi bi-person-square"></i>
                             </div>
                             <div class="col mt-4" style="color: rgb(173, 173, 173)">
-                               <h5> Yan Emanuel de Sousa Pereira</h5>
+                               <h5> Yan Emanuel</h5>
                             </div>
                         </div>
                         {{-- Descrição --}}
@@ -174,7 +179,7 @@
                                 <i class="bi bi-person-square"></i>
                             </div>
                             <div class="col mt-4" style="color: rgb(173, 173, 173)">
-                               <h5> Yan Emanuel de Sousa Pereira</h5>
+                               <h5> Yan Emanuel</h5>
                             </div>
                         </div>
                         {{-- Descrição --}}
@@ -202,6 +207,36 @@
             </div>
         </div>
     </footer>
+
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h1 class="modal-title fs-5 " id="exampleModalLabel">Faça seu login</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email </label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Senha</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class=" mb-3">
+                    <button type="submit" style="background-color: #422d55; color: rgb(255, 255, 255)" class="btn">Entrar</button>
+                </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
     </script>
