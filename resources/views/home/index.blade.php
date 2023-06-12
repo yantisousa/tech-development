@@ -20,28 +20,8 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar bg-body-tertiary">
-            <div class="container-fluid">
-                <div style="width: 70%" class="row mx-auto">
-                    <div class="col ">
-                        <i class="bi bi-6-circle-fill logo"></i>
-                    </div>
-                    <div class="col text-end mt-3">
-                        <a href="">
-                            <h4 class="link">Cursos</h4>
-                        </a>
-                    </div>
-                    <div class="col-2 text-end mt-3">
-                        <a href="" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                            <h4 class="link"><i class="bi bi-person"></i> Entrar</h4>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-        </nav>
-    </header>
+   @extends('template.layout')
+   @section('content')
     <section class="section-1">
         <div class="container ">
             <div style="height: 500px" class="row align-items-center text-center">
@@ -51,7 +31,7 @@
                     </div>
                     <h3><strong class="desc">Cursos de programação onde quiser e onde estiver.</strong></h3>
                     <button class="btn"
-                        style="background-color: #422d55; color: rgb(255, 255, 255)">Matricule-se</button>
+                        style="background-color: #ddda24; color: rgb(2, 2, 2)"><b>Matricule-se</b></button>
                 </div>
 
             </div>
@@ -60,10 +40,10 @@
                     <div class="techs">
                         <div class="row">
                             <div class="col-2 ms-4 mt-3" ><img src="{{ asset('assets/img/front-end.png') }}" class="img-thumbnail" alt=""></div>
-                            <div class="col mt-3" style="color:white">FRONT-END</div>
+                            <div class="col mt-3"><b>FRONT-END</b></div>
                         </div>
                         <div class="row">
-                            <div class="col ms-4 mt-3" style="color:white">HTML, CSS, JAVASCRIPT E REACT.</div>
+                            <div class="col ms-4 mt-3" ><b>HTML, CSS, JAVASCRIPT E REACT.</b></div>
                         </div>
                     </div>
                 </div>
@@ -71,10 +51,10 @@
                     <div class="techs">
                         <div class="row">
                             <div class="col-2 ms-4 mt-3" ><img src="{{ asset('assets/img/encriptacao.png') }}" class="img-thumbnail" alt=""></div>
-                            <div class="col mt-3" style="color:white">BACK-END</div>
+                            <div class="col mt-3"><b>BACK-END</b></div>
                         </div>
                         <div class="row">
-                            <div class="col ms-4 mt-3" style="color:white">PHP, LARAVEL E MYSQL.</div>
+                            <div class="col ms-4 mt-3"><b>PHP, LARAVEL E MYSQL.</b></div>
                         </div>
                     </div>
                 </div>
@@ -82,10 +62,10 @@
                     <div class="techs">
                         <div class="row">
                             <div class="col-2 ms-4 mt-3" ><img src="{{ asset('assets/img/front-end.png') }}" class="img-thumbnail" alt=""></div>
-                            <div class="col mt-3" style="color:white">FULL-STACK</div>
+                            <div class="col mt-3"><b>FULL-STACK</b></div>
                         </div>
                         <div class="row">
-                            <div class="col ms-4 mt-3" style="color:white">HTML, CSS, JAVASCRIPT, REACT, VUE, PHP, LARAVEL E MYSQL.</div>
+                            <div class="col ms-4 mt-3" ><b>HTML, CSS, JAVASCRIPT, REACT, VUE, PHP, LARAVEL E MYSQL.</b></div>
                         </div>
                     </div>
                 </div>
@@ -123,6 +103,9 @@
 
             </div>
         </div>
+    </section>
+    <section class="section-4">
+
     </section>
     <section class="section-3">
         <div class="container">
@@ -199,8 +182,8 @@
     <footer>
         <div class="container" style="height: 20vh">
             <div class="row align-items-end mt-6">
-                <div class="col text-center">
-                        Termos de uso
+                <div style="color:white" class="col text-center">
+                       <span style="color:#ddda24"> Termos de uso</span>
                     <h6> Todos os direitos reservados © 2023</h6>
                     <h6>Yan Emanuel</h6>
                 </div>
@@ -242,6 +225,8 @@
     </script>
     <script src="{{ asset('assets/js/jquery.js') }}"></script>
     <script src="{{ asset('assets/js/index.js') }}"></script>
+   @endsection
+
 </body>
 
 </html>

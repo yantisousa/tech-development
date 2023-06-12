@@ -1,0 +1,11 @@
+body {
+    color: rgb(218, 218, 218);
+    background-image: linear-gradient(
+        5deg,
+        hsl(0deg 0% 0%) 0%,
+        hsl(0deg 30% 18%) 25%,
+        hsl(307deg 39% 19%) 50%,
+        hsl(253deg 23% 13%) 75%,
+        hsl(0deg 0% 0%) 100%
+      );
+}

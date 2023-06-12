@@ -1,0 +1,10 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+.navbar {
+    background-color: transparent;
+    color: white;
+    width: 100%;
+    position: fixed;
+}

@@ -2,28 +2,36 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class HomeController extends Controller
+class UserController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $string = "Yan yan yan yan yan";
-        $chunkedString = chunk_split($string, 3, "/");
-        return view('home.index');
+        //
     }
 
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function login()
     {
-        //
+        return view('user.login');
     }
 
+    public function auth(Request $request)
+    {
+        $email = $request->email;
+        $password = $request->email;
+        if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
+            dd(Auth::attempt(['email' => $request->email, 'password' => $request->password]));
+        }
+    }
 
     /**
      * Store a newly created resource in storage.

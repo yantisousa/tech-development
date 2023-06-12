@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\CursosController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
+use App\Models\Cursos;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +18,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index']);
+Route::prefix('/users')->controller(UserController::class)->group(function(){
+    Route::get('/login', 'login')->name('user.login');
+    Route::post('/auth', 'auth')->name('user.auth');
+});
+Route::prefix('/cursos')->controller(CursosController::class)->group(function(){
+    Route::get('/index', 'index')->name('cursos.index');
+    Route::get('/pesquisa', 'pesquisa')->name('cursos.pesquisa');
+    Route::get('/filtros', 'filtros')->name('cursos.filtros');
+});

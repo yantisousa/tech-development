@@ -1,19 +1,11 @@
 body {
-    color: rgb(218, 218, 218);
-    background-image: linear-gradient(
-        5deg,
-        hsl(0deg 0% 0%) 0%,
-        hsl(0deg 30% 18%) 25%,
-        hsl(307deg 39% 19%) 50%,
-        hsl(253deg 23% 13%) 75%,
-        hsl(0deg 0% 0%) 100%
-      );
+ background-color: #1b1b1b;
 }
 
 .section-1 {
 
     color: rgb(173, 173, 173);
-    height: 100vh;
+    height: 70vh;
     font-family: 'Roboto Mono', monospace;
 
 }
@@ -63,6 +55,8 @@ a {
     color: white;
     width: 100%;
     position: fixed;
+    top: 0;
+    z-index: 9999;
 }
 .bg-body-tertiary {
     --bs-bg-opacity: 1;
@@ -74,6 +68,7 @@ a {
 }
 .title {
     font-size: 40px;
+    color: #ddda24;
 }
 .pesquisa {
     width: 300px;
@@ -140,8 +135,8 @@ a {
 }
 .techs {
     border: 1px solid #453f4b;
-    background: rgb(31,51,55);
-background: linear-gradient(135deg, rgba(31,51,55,1) 0%, rgba(60,54,66,1) 2%, rgba(0,0,0,1) 100%);
+    background-color: white;
+    color: black;
     height: 200px;
     border-radius: 20px;
 }
@@ -168,3 +163,8 @@ footer {
     border-radius: var(--bs-modal-border-radius);
     outline: 0;
 }
+.section-4 {
+    background-color:#ddda24;
+    height: 150px;
+}
+
