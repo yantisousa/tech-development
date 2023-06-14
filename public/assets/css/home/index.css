@@ -5,32 +5,22 @@ body {
 .section-1 {
 
     color: rgb(173, 173, 173);
-    height: 70vh;
     font-family: 'Roboto Mono', monospace;
 
 }
 .section-2 {
 
     color: #dde3ed;
-    height: 50vh;
     font-family: 'Eurostile Extended', sans-serif;
 }
 @media (max-width:771px) {
-    .section-1 {
-        height: 140vh;
-    }
-    .section-2 {
-        height: 90vh;
-    }
-    .section-3 {
-        margin-top: 100px;
-    }
+
     h4{
         position: relative;
         left: 60px;
     }
     footer {
-        margin-top: 500px;
+        margin-top: 100px;
     }
     .logo {
         position: relative;
@@ -39,13 +29,11 @@ body {
     .link {
         display: none;
     }
-
-}
-@media (max-width: 375px) {
-    .section-2 {
-        margin-top: 300px
+    .section-4 {
+        margin-top: 300px;
     }
 }
+
 a {
     text-decoration: none;
     color: white;
@@ -117,7 +105,6 @@ a {
     animation-fill-mode: forwards;
   }
 .section-3 {
-    height: 50vh;
 }
 /* @media (max-width: 900px){
     .section-3 {
@@ -141,7 +128,6 @@ a {
     border-radius: 20px;
 }
 footer {
-    height: 30vh;
 }
 #techs {
     animation: desloca 2s ease forwards;
@@ -149,20 +135,7 @@ footer {
 @keyframes desloca {
     from {margin-right: 400px; opacity: 0;}
 }
-.modal-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    color: var(--bs-modal-color);
-    pointer-events: auto;
-    background-color: #1b1b1b;
 
-    background-clip: padding-box;
-    border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
-    border-radius: var(--bs-modal-border-radius);
-    outline: 0;
-}
 .section-4 {
     background-color:#ddda24;
     height: 150px;

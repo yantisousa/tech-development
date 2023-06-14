@@ -16,6 +16,10 @@ class UserController extends Controller
         //
     }
 
+    public function create()
+    {
+        return view('user.create');
+    }
     /**
      * Show the form for creating a new resource.
      */
@@ -24,13 +28,18 @@ class UserController extends Controller
         return view('user.login');
     }
 
-    public function auth(Request $request)
+    public function authenticate(Request $request)
     {
         $email = $request->email;
-        $password = $request->email;
-        if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
-            dd(Auth::attempt(['email' => $request->email, 'password' => $request->password]));
+        $password = $request->password;
+        if (Auth::attempt(['email' => $email, 'password' => $password])) {
+            return to_route('principal');
         }
+    }
+    public function logout($id)
+    {
+        Auth::logout($id);
+        return to_route('principal');
     }
 
     /**
@@ -38,7 +47,14 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        User::create([
+            'is_admin' => 0,
+            'name' => $request->nome,
+            'email' => $request->email,
+            'password' => $request->password
+        ]);
+        return to_route('login')->with('msg', 'Seu usuário foi logado com sucesso!');
     }
 
     /**
@@ -62,7 +78,7 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+       
     }
 
     /**

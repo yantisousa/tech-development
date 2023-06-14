@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Areas;
 use App\Models\Cursos;
+use App\Models\Modulos;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CursosController extends Controller
 {
@@ -49,7 +52,15 @@ class CursosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cursos = Cursos::create([
+            'areas_id' => $request->areas_id,
+            'nome' => $request->name,
+            'aprendizado' => $request->aprendizado,
+            'desc' => $request->name,
+            'ativo' => 1,
+            'is_framework' => $request->linguagem
+        ]);
+        return Cursos::with('areasRelacionamento')->where('id', $cursos->id)->first();
     }
 
     /**
@@ -57,7 +68,23 @@ class CursosController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $curso = Cursos::find($id);
+        $cursoCountEp = Cursos::withCount('epsodiosRelacionamento')->where('id', $id)->first();
+        $somaTempoEpsodios = DB::table('episodios')
+        ->where('cursos_id', $curso->id)
+        ->pluck('tempo');
+        $modulos = Modulos::with('epsodiosRelacionamento', 'cursoRelacionamento')->where('cursos_id', $curso->id)->get();
+        $horas = [];
+        foreach($somaTempoEpsodios as $tempo){
+            list($hora, $minuto, $segundo) = explode(':', $tempo);
+            array_push($horas, $hora);
+        }
+        $horaTotal = 0;
+        foreach($horas as $teste){
+            $horaTotal = $horaTotal + $teste;
+        }
+
+        return view('cursos.show', compact('curso', 'cursoCountEp', 'horaTotal', 'modulos'));
     }
 
     /**

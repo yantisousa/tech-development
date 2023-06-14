@@ -14,11 +14,7 @@
             background-color: #ddda24;
             margin-top: 200px;
             width: 500px;
-            @if(session()->has('msg'))
-                height: 500px;
-            @else
-                height: 400px;
-            @endif
+            height: 500px;
             border-radius: 20px;
         }
 
@@ -36,20 +32,17 @@
 
     <body>
         <section>
-            
             <div class="container ">
-                
                 <div class="full row align-items-center ">
-                        <div class="col text-center text-black mt-3">
-                        <h2><b>Login</b></h2>
-                        @if(session()->has('msg'))
-                        <div class="alert alert-success" role="alert">
-                            {{session('msg')}}
-                        </div>
-                        @endif
+                    <div class="col text-center text-black mt-3">
+                        <h2><b>Cadastro</b></h2>
                     </div>
-                    <form action="{{ route('user.authenticate') }}" method="POST" class="mt-5">
+                    <form action="{{ route('user.store') }}" method="POST" class="mt-5">
                         @csrf
+                        <div class="mb-3" style="color: black">
+                            <label class="form-label"><b>Nome</b> </label>
+                            <input name="nome" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
                         <div class="mb-3" style="color: black">
                             <label class="form-label"><b>Email</b> </label>
                             <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
@@ -60,11 +53,11 @@
                         </div>
 
                         <button style="background-color: black; border: none" type="submit"
-                            class="btn btn-primary text-center">Entrar</button>
+                            class="btn btn-primary text-center">Criar</button>
                     </form>
                     <div class="col text-center text-black mt-3">
                         <a href="{{route('user.create')}}"><button style="background-color: #ddda24; border: none" type="submit"
-                            class="btn btn-primary text-center text-black">Não tenho conta</button></a>
+                            class="btn btn-primary text-center text-black">Já tenho conta</button></a>
                     </div>
                 </div>
             </div>
