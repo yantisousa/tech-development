@@ -17,3 +17,10 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::post('/login', function(Request $request){
+    if(Auth::attempt(['email' => $request->email, 'password' => $request->password])){
+        $user = Auth::user();
+        $token = $user->createToken('JWT');
+        return response()->json($token);
+    }
+});

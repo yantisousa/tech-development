@@ -54,7 +54,7 @@
             </div>
             @endif
         </div>
-        <div style="background-color: #ddda24; height: 150px; width: 100%">
+        <div style="background-color: #D7CF2D; height: 150px; width: 100%">
             <div class="row text-center">
                 <div class="col mt-5">
                     <b>Episódios: {{ $cursoCountEp->epsodios_relacionamento_count }}</b>
@@ -96,14 +96,14 @@
                     <b>
                         <ul>
                             @foreach ($modulos as $modulo)
-                                <li><h6>{{ $modulo->nome }}</h6></li>
+                                <li><h6 id="h6-aprender-{{$modulo->id}}">{{ $modulo->nome }}</h6></li>
                             @endforeach
                         </ul>
                     </b>
                 </div>
             </div>
         </div>
-        <div class="container mt-5" style="background-color: #ddda24; width: 100%; border-radius:10px">
+        <div class="container mt-5" style="background-color: #D7CF2D; width: 100%; border-radius:10px">
             <div class="row ms-2 mt-3">
                 <h3>Aulas</h3>
             </div>
@@ -117,7 +117,7 @@
                                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                         data-bs-target="#collapse-{{ $modulo->id }}" aria-expanded="false"
                                         aria-controls="collapseTwo">
-                                        {{ $modulo->nome }}
+                                        <span id="nome-{{$modulo->id}}">{{ $modulo->nome }}</span>
                                     </button>
                                 </h2>
                                 <div id="collapse-{{ $modulo->id }}" class="accordion-collapse collapse"
@@ -158,6 +158,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
+            <button class="btn btn-success add-modulo">Adicionar Módulo</i></button>
             <table class="table">
                 <thead>
                   <tr>
@@ -165,13 +166,19 @@
                     <th scope="col" >Opções</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody id="tabela-modulos">
+                    
              @foreach ($modulos as $modulo)
                   <tr>
-                    <td><input type="button" id="modulo-id"></td>
                     <td><input id="nome-modal-{{$modulo->id}}" type="text" disabled value="{{$modulo->nome}}"></td>
-                    <td><span id="pincel-{{$modulo->id}}" onclick="editModulo({{$modulo->id}})" class="badge text-bg-warning"><i class="bi bi-pencil"></i></span><button style="display: none" id="edit-{{$modulo->id}}" class="btn btn-primary">Editar</button></td>
-                    <td><span class="badge text-bg-danger"><i class="bi bi-x-lg"></i></span></td>
+                    <td>
+                        <span id="pincel-{{$modulo->id}}" onclick="editModulo({{$modulo->id}})" class="badge text-bg-warning">
+                        <i class="bi bi-pencil"></i>
+                        </span><button onclick="updateModulo({{$modulo->id}})" style="display: none" id="teste-{{$modulo->id}}" class="btn btn-primary">Editar</button>
+                    </td>
+                    <td>
+                        <span class="badge text-bg-danger"><i class="bi bi-x-lg"></i></span>
+                    </td>
                   </tr>
             @endforeach
                 </tbody>

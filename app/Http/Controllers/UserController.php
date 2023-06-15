@@ -29,7 +29,7 @@ class UserController extends Controller
     }
 
     public function authenticate(Request $request)
-    {
+    {   
         $email = $request->email;
         $password = $request->password;
         if (Auth::attempt(['email' => $email, 'password' => $password])) {
@@ -38,7 +38,8 @@ class UserController extends Controller
     }
     public function logout($id)
     {
-        Auth::logout($id);
+        Auth::user()->tokens()->delete();
+        Auth::logout(Auth::user()->id);
         return to_route('principal');
     }
 

@@ -36,7 +36,7 @@
 
     <body>
         <section>
-            
+            <input type="hidden" name="" value="{{ csrf_token() }}" id="_token">
             <div class="container ">
                 
                 <div class="full row align-items-center ">
@@ -48,18 +48,18 @@
                         </div>
                         @endif
                     </div>
-                    <form action="{{ route('user.authenticate') }}" method="POST" class="mt-5">
+                    <form class="mt-5">
                         @csrf
                         <div class="mb-3" style="color: black">
                             <label class="form-label"><b>Email</b> </label>
-                            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                            <input id="email" name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
                         </div>
                         <div class="mb-3" style="color: black">
                             <label for="exampleInputPassword1" class="form-label"><b>Senha</b></label>
-                            <input name="password" type="password" class="form-control" id="exampleInputPassword1">
+                            <input id="password" name="password" type="password" class="form-control" id="exampleInputPassword1">
                         </div>
 
-                        <button style="background-color: black; border: none" type="submit"
+                        <button id="entrar" style="background-color: black; border: none" type="button"
                             class="btn btn-primary text-center">Entrar</button>
                     </form>
                     <div class="col text-center text-black mt-3">
@@ -72,6 +72,8 @@
     </body>
 
     </html>
+    <script src="{{asset('assets/js/jquery.js')}}"></script>
+    <script src="{{asset('assets/js/login/index.js')}}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
 </script>
